@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q19DQVTKRY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q19DQVTKRY');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DicomSmart Medical Systems, inc</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+        <div class="flex items-center justify-between">
+            <div class="pt-2">
+                <a href="#">
+                    <img src="logo.png" alt="Logo DicomSmart" class="max-w-32">
+                </a>
+            </div>
+            <!-- Menu -->
+            <div class="hidden space-x-6 md:flex ">
+                <a class="hover:text-primary-500 text-secondary-500" href="#aboutus" class="">About Us</a>
+                <a class="hover:text-primary-500 text-secondary-500" href="#products" class="">Products</a>
+                <a class="hover:text-primary-500 text-secondary-500" href="#contactus" class="">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <section id="hero">
+        <div class="container flex flex-col items-stretch px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <h1 class=" text-4xl font-bold text-center text-secondary-500 md:text-5xl md:text-left md:max-w-md">
+                    Health Informatics Specialists
+                </h1>
+                <p class=" text-center text-secondary-500 md:text-left md:max-w-md">
+                    At DicomSmart we believe in simple solutions for complex problems, that’s why we create and deploy
+                    software that’s easy to use and maintain.
+                </p>
+            </div>
+            <div class="md:w-1/2 p-5">
+                <img src="xray.jpg" alt="X-Ray of a Hand"
+                    class="mx-auto block rounded-lg shadow-secondary-800 shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutus" class="mt-15">
+        <div
+            class="container flex flex-col items-stretch px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row-reverse">
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <h1 class=" text-3xl font-bold text-center text-secondary-500 md:text-3xl md:text-left md:max-w-md">
+                    About Us
+                </h1>
+                <p class=" text-center text-secondary-500 md:text-left md:max-w-sm">
+                    Founded in 2012 and incorporated in 2013 by a small group of talented individuals from a variety of
+                    backgrounds, we have provided software based solutions for Clinics, Hospitals and Radiology
+                    Deparments in several countries around the world.
+                </p>
+                <p class="text-center text-secondary-500 md:text-left md:max-w-sm">
+                    We help our clients and customers navigate the complex issues of radiology workflow management,
+                    DICOM and HL7 integrations and digital imaging local and cloud based storage solutions.
+                </p>
+            </div>
+            <div class="md:w-1/2 p-5">
+                <img src="group.jpg" alt="A group of people working"
+                    class="mx-auto block rounded-lg shadow-secondary-800 shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="mt-15">
+        <div class="container flex flex-col items-stretch px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <h1 class=" text-3xl font-bold text-center text-secondary-500 md:text-3xl md:text-left">
+                    Products
+                </h1>
+
+
+                <div class="text-center text-secondary-500 md:text-left">
+                    <h1 class=" text-xl font-bold text-center text-secondary-500 md:text-xl md:text-left">
+                        dicomfix™ CLOUD
+                    </h1>
+                    <p class="mt-3">Teleradiology at your fingertips: dicomfix™ CLOUD is the easiest way to place your
+                        studies in the
+                        Cloud so that your radiologists can diagnose remotely from anywhere in the world.</p>
+                    <p class="mt-4">
+                        <a href="https://www.dicomfix.com/cloud"
+                            class="px-4 py-2 rounded bg-primary-500 text-white mt-4"> Learn More</a></p>
+                </div>
+                <div class="text-center text-secondary-500 md:text-left">
+                    <h1 class=" text-xl font-bold text-center text-secondary-500 md:text-xl md:text-left">
+                        dicomfix™ RIS/PACS
+                    </h1>
+                    <p class="mt-3">
+                        Take control of your radiology department with dicomfix™ RIS/PACS. Manage your study workflow
+                        from appointments to result distribution. Go paperless and improve the overall quality of your
+                        service by reducing waiting times for your patients.
+                    </p>
+                    <p class="mt-4">
+                        <a href="https://www.dicomfix.com/" class="px-4 py-2 rounded bg-primary-500 text-white mt-4">
+                            Learn More</a></p>
+                </div>
+            </div>
+            <div class="md:w-1/2 p-5">
+                <img src="us.jpg" alt="An Ultrasound machine"
+                    class="mx-auto block rounded-lg shadow-secondary-800 shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="contactus">
+        <div class="container flex flex-col items-stretch px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+            <div class="md:w-1/2 p-5">
+                <div id="map" class="mx-auto"></div>
+            </div>
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <h1 class=" text-3xl font-bold text-center text-secondary-500 md:text-3xl md:text-left md:max-w-md">
+                    Contact Us
+                </h1>
+                <form id="dicomsmart_website" onsubmit="return send(event);">
+                    <div class="flex-col text-center text-secondary-500 md:text-left md:max-w-sm">
+                        <p id="success" class="text-green-800 font-bold hidden">Thank you, we will contact you shortly!
+                        </p>
+                        <label for="name" class="text-secondary-500 block font-bold">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..."
+                            class="text-secondary-500 border p-2 rounded">
+                        <p id="name-error" class="text-red-400 text-sm hidden error-message">Please enter your name</p>
+                        <label for="email" class="text-secondary-500 block mt-3 font-bold">Email</label>
+                        <input type="email" id="email" name="email" placeholder="sample@example.com"
+                            class="text-secondary-500 border p-2 rounded ">
+                        <p id="email-error" class="text-red-400 text-sm hidden error-message">Please enter a valid email
+                        </p>
+                        <label for="message" class="text-secondary-500 block mt-3 font-bold">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message..."
+                            class="text-secondary-500 border p-2 rounded"></textarea>
+                        <p id="message-error" class="text-red-400 text-sm hidden error-message">Please enter a message
+                        </p>
+                        <input type="submit" value="Send"
+                            class="rounded bg-primary-500 text-white px-4 py-2 block mt-3 cursor-pointer mx-auto md:mr-auto md:mx-0">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary-800 text-secondary-200 h-96">
+        <div
+            class="container flex flex-col  mx-auto mt-10 p-5 space-y-5  items-stretch md:flex-row md:space-x-5 md:space-y-0">
+            <div class="flex flex-col md:w-1/3">
+                <h1 class="font-bold text-xl text-center md:text-left">Address</h1>
+                <p class="mt-5  text-center text-secondary-500 md:text-left">DicomSmart Medical Systems,
+                    inc.<br />
+                    18501 Pines Blvd., STE 3017<br>Pembroke Pines, FL 33029</p>
+            </div>
+            <div class="flex flex-col md:w-1/3">
+                <h1 class="font-bold text-xl text-center md:text-left">Contact</h1>
+                <p class="mt-5 text-center text-secondary-500 md:text-left">
+                    +1 (305) 260-6078<br>
+                    +1 (954) 607-2426<br>
+                    <a href="mailto:corporate@dicomsmart.com"
+                        class="hover:text-primary-500">corporate@dicomsmart.com</a>
+                </p>
+            </div>
+            <div class="flex flex-col md:w-1/3 ">
+                <h1 class="font-bold text-xl text-center md:text-left">Information</h1>
+                <p class="mt-5  text-center text-secondary-500 md:text-left">
+                    <a href="privacy.html" class="hover:text-primary-500">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+        <div class="container text-center mx-auto text-xs text-secondary-200 font-bold mt-5">© Copyright 2013-2024 All
+            Rights Reserved.</div>
+
+    </section>
+</body>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4786357.js"></script>
+<script>
+    const element = document.getElementById('map');
+    element.style = 'height:300px;width:300px;';
+    const map = L.map(element);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    const target = L.latLng('26.01023', '-80.39597');
+    map.setView(target, 14);
+    L.marker(target).addTo(map);
+
+    const isValidEmail = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+    };
+
+
+    const send = (e) => {
+
+        e.preventDefault();
+        const user_name = document.getElementById('name');
+        const user_email = document.getElementById('email');
+        const user_message = document.getElementById('message');
+
+        const user_name_error = document.getElementById('name-error');
+        const user_email_error = document.getElementById('email-error');
+        const user_message_error = document.getElementById('message-error');
+        const success_message = document.getElementById('success');
+
+        user_name.classList.remove('border-red-500');
+        user_email.classList.remove('border-red-500');
+        user_message.classList.remove('border-red-500');
+
+        user_name_error.classList.add('hidden');
+        user_email_error.classList.add('hidden');
+        user_message_error.classList.add('hidden');
+        success_message.classList.add('hidden');
+
+        user_name_error.classList.remove('block');
+        user_email_error.classList.remove('block');
+        user_message_error.classList.remove('block');
+        success_message.classList.remove('block');
+
+        if (user_name.value == "") {
+            user_name.classList.add('border-red-500');
+            user_name_error.classList.remove('hidden');
+            user_name_error.classList.add('block');
+            return false;
+        }
+
+        if (user_email.value == "" || !isValidEmail(user_email.value)) {
+            user_email.classList.add('border-red-500');
+            user_email_error.classList.remove('hidden');
+            user_email_error.classList.add('block');
+            return false;
+        }
+
+        if (user_message.value == "") {
+            user_message.classList.add('border-red-500');
+            user_message_error.classList.remove('hidden');
+            user_message_error.classList.add('block');
+            return false;
+        }
+
+        success_message.classList.add('block');
+        success_message.classList.remove('hidden');
+
+    }
+</script>
+
+</html>
